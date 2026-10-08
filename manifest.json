@@ -1,0 +1,329 @@
+{
+ "method_version": "apt-v1 (grid hex250-v1, layers static-v1, noise noise-v1, canopy canopy-v2, price price-v1, car car-v1, curves curves-v1)",
+ "canopy": {
+  "version": "canopy-v2",
+  "year": 2021,
+  "height_m": 3.0,
+  "scan_date": "2021-04",
+  "overlay": {
+   "url": "canopy.webp",
+   "bounds": [
+    [
+     51.682209,
+     19.317298
+    ],
+    [
+     51.862235,
+     19.645746
+    ]
+   ],
+   "res_m": 8.0,
+   "size": [
+    4570,
+    4048
+   ]
+  }
+ },
+ "price": {
+  "version": "price-v1",
+  "deeds": 7660,
+  "date_min": "2025-07-03",
+  "date_max": "2026-09-08",
+  "window_from": "2025-07-01",
+  "min_n": 10,
+  "min_points": 5,
+  "max_radius_m": 1000,
+  "hexes_with_price": 1667,
+  "coverage_inhabited_pct": 69.1,
+  "price_m2_pct": {
+   "10": 6864.6,
+   "25": 7348.0,
+   "50": 8138.0,
+   "75": 9678.0,
+   "90": 10655.0
+  }
+ },
+ "n": 5662,
+ "bounds": [
+  [
+   51.68597,
+   19.32292
+  ],
+  [
+   51.85888,
+   19.63949
+  ]
+ ],
+ "windows": {
+  "morning": {
+   "start": "07:00",
+   "end": "09:00"
+  },
+  "midday": {
+   "start": "11:00",
+   "end": "14:00"
+  },
+  "afternoon": {
+   "start": "15:00",
+   "end": "18:00"
+  }
+ },
+ "default_dir": {
+  "morning": "to",
+  "midday": "to",
+  "afternoon": "from"
+ },
+ "curves": {
+  "travel": {
+   "default_ideal_min": 10,
+   "default_max_min": 45
+  },
+  "tram_stop": {
+   "near_zero_score": 0.6,
+   "ideal_m": [
+    150,
+    400
+   ],
+   "zero_at_m": 1200
+  },
+  "bus_stop": {
+   "full_m": 150,
+   "zero_at_m": 800
+  },
+  "frequency": {
+   "scale_per_h": 12
+  },
+  "green": {
+   "full_m": 200,
+   "zero_at_m": 1000
+  },
+  "canopy": {
+   "full_share": 0.4,
+   "default_hard_min": 0.15
+  },
+  "noise": {
+   "road": {
+    "indicator": "lden",
+    "soft_db": 60,
+    "hard_db": 65,
+    "hard_max_share": 0.25
+   },
+   "rail": {
+    "indicator": "lden",
+    "soft_db": 60,
+    "hard_db": 65,
+    "hard_max_share": 0.25
+   },
+   "industry": {
+    "indicator": "lden",
+    "soft_db": 55,
+    "hard_db": 60,
+    "hard_max_share": 0.25
+   },
+   "bedroom_mode_indicator": "ln",
+   "bedroom_db_shift": -10
+  },
+  "price": {
+   "enabled": true,
+   "low_m2": 6900,
+   "high_m2": 10700,
+   "default_hard_max_m2": 10000
+  },
+  "defaults": {
+   "weights": {
+    "tram_stop": 0,
+    "bus_stop": 2,
+    "frequency": 2,
+    "green": 2,
+    "canopy": 2,
+    "noise_road": 3,
+    "noise_rail": 2,
+    "noise_industry": 1,
+    "price": 0
+   },
+   "min_score": 0
+  },
+  "max_targets": 5
+ },
+ "noise_steps": {
+  "lden": [
+   55,
+   60,
+   65,
+   70,
+   75
+  ],
+  "ln": [
+   45,
+   50,
+   55,
+   60,
+   65
+  ]
+ },
+ "matrix": {
+  "scale": 2,
+  "cap": 60,
+  "scenarios": [
+   "afternoon_car",
+   "afternoon_p50_max1transfer_lka",
+   "afternoon_p50_max1transfer_nolka",
+   "afternoon_p50_unlimited_lka",
+   "afternoon_p50_unlimited_nolka",
+   "afternoon_p85_max1transfer_lka",
+   "afternoon_p85_max1transfer_nolka",
+   "afternoon_p85_unlimited_lka",
+   "afternoon_p85_unlimited_nolka",
+   "afternoon_static_max1transfer_lka",
+   "afternoon_static_max1transfer_nolka",
+   "afternoon_static_unlimited_lka",
+   "afternoon_static_unlimited_nolka",
+   "bike",
+   "midday_car",
+   "midday_p50_max1transfer_lka",
+   "midday_p50_max1transfer_nolka",
+   "midday_p50_unlimited_lka",
+   "midday_p50_unlimited_nolka",
+   "midday_p85_max1transfer_lka",
+   "midday_p85_max1transfer_nolka",
+   "midday_p85_unlimited_lka",
+   "midday_p85_unlimited_nolka",
+   "midday_static_max1transfer_lka",
+   "midday_static_max1transfer_nolka",
+   "midday_static_unlimited_lka",
+   "midday_static_unlimited_nolka",
+   "morning_bike",
+   "morning_car",
+   "morning_p50_max1transfer_lka",
+   "morning_p50_max1transfer_nolka",
+   "morning_p50_unlimited_lka",
+   "morning_p50_unlimited_nolka",
+   "morning_p85_max1transfer_lka",
+   "morning_p85_max1transfer_nolka",
+   "morning_p85_unlimited_lka",
+   "morning_p85_unlimited_nolka",
+   "morning_static_max1transfer_lka",
+   "morning_static_max1transfer_nolka",
+   "morning_static_unlimited_lka",
+   "morning_static_unlimited_nolka",
+   "morning_walk",
+   "walk"
+  ],
+  "base": {
+   "afternoon_car": "morning_car",
+   "afternoon_p50_max1transfer_lka": "afternoon_static_unlimited_nolka",
+   "afternoon_p50_max1transfer_nolka": "afternoon_static_unlimited_nolka",
+   "afternoon_p50_unlimited_lka": "afternoon_static_unlimited_nolka",
+   "afternoon_p50_unlimited_nolka": "afternoon_static_unlimited_nolka",
+   "afternoon_p85_max1transfer_lka": "afternoon_static_unlimited_nolka",
+   "afternoon_p85_max1transfer_nolka": "afternoon_static_unlimited_nolka",
+   "afternoon_p85_unlimited_lka": "afternoon_static_unlimited_nolka",
+   "afternoon_p85_unlimited_nolka": "afternoon_static_unlimited_nolka",
+   "afternoon_static_max1transfer_lka": "afternoon_static_unlimited_nolka",
+   "afternoon_static_max1transfer_nolka": "afternoon_static_unlimited_nolka",
+   "afternoon_static_unlimited_lka": "afternoon_static_unlimited_nolka",
+   "midday_car": "morning_car",
+   "midday_p50_max1transfer_lka": "midday_static_unlimited_nolka",
+   "midday_p50_max1transfer_nolka": "midday_static_unlimited_nolka",
+   "midday_p50_unlimited_lka": "midday_static_unlimited_nolka",
+   "midday_p50_unlimited_nolka": "midday_static_unlimited_nolka",
+   "midday_p85_max1transfer_lka": "midday_static_unlimited_nolka",
+   "midday_p85_max1transfer_nolka": "midday_static_unlimited_nolka",
+   "midday_p85_unlimited_lka": "midday_static_unlimited_nolka",
+   "midday_p85_unlimited_nolka": "midday_static_unlimited_nolka",
+   "midday_static_max1transfer_lka": "midday_static_unlimited_nolka",
+   "midday_static_max1transfer_nolka": "midday_static_unlimited_nolka",
+   "midday_static_unlimited_lka": "midday_static_unlimited_nolka",
+   "morning_p50_max1transfer_lka": "morning_static_unlimited_nolka",
+   "morning_p50_max1transfer_nolka": "morning_static_unlimited_nolka",
+   "morning_p50_unlimited_lka": "morning_static_unlimited_nolka",
+   "morning_p50_unlimited_nolka": "morning_static_unlimited_nolka",
+   "morning_p85_max1transfer_lka": "morning_static_unlimited_nolka",
+   "morning_p85_max1transfer_nolka": "morning_static_unlimited_nolka",
+   "morning_p85_unlimited_lka": "morning_static_unlimited_nolka",
+   "morning_p85_unlimited_nolka": "morning_static_unlimited_nolka",
+   "morning_static_max1transfer_lka": "morning_static_unlimited_nolka",
+   "morning_static_max1transfer_nolka": "morning_static_unlimited_nolka",
+   "morning_static_unlimited_lka": "morning_static_unlimited_nolka"
+  }
+ },
+ "layer_columns": [
+  "canopy",
+  "d_bus_m",
+  "d_green_m",
+  "d_tram_m",
+  "freq_bus_afternoon",
+  "freq_bus_allday",
+  "freq_bus_midday",
+  "freq_bus_morning",
+  "freq_tram_afternoon",
+  "freq_tram_allday",
+  "freq_tram_midday",
+  "freq_tram_morning",
+  "industry_lden_ge55",
+  "industry_lden_ge60",
+  "industry_lden_ge65",
+  "industry_lden_ge70",
+  "industry_lden_ge75",
+  "industry_ln_ge45",
+  "industry_ln_ge50",
+  "industry_ln_ge55",
+  "industry_ln_ge60",
+  "industry_ln_ge65",
+  "price_m2",
+  "price_n",
+  "price_r",
+  "rail_all_lden_ge55",
+  "rail_all_lden_ge60",
+  "rail_all_lden_ge65",
+  "rail_all_lden_ge70",
+  "rail_all_lden_ge75",
+  "rail_all_ln_ge45",
+  "rail_all_ln_ge50",
+  "rail_all_ln_ge55",
+  "rail_all_ln_ge60",
+  "rail_all_ln_ge65",
+  "rail_lden_ge55",
+  "rail_lden_ge60",
+  "rail_lden_ge65",
+  "rail_lden_ge70",
+  "rail_lden_ge75",
+  "rail_ln_ge45",
+  "rail_ln_ge50",
+  "rail_ln_ge55",
+  "rail_ln_ge60",
+  "rail_ln_ge65",
+  "road_lden_ge55",
+  "road_lden_ge60",
+  "road_lden_ge65",
+  "road_lden_ge70",
+  "road_lden_ge75",
+  "road_ln_ge45",
+  "road_ln_ge50",
+  "road_ln_ge55",
+  "road_ln_ge60",
+  "road_ln_ge65",
+  "tram_lden_ge55",
+  "tram_lden_ge60",
+  "tram_lden_ge65",
+  "tram_lden_ge70",
+  "tram_lden_ge75",
+  "tram_ln_ge45",
+  "tram_ln_ge50",
+  "tram_ln_ge55",
+  "tram_ln_ge60",
+  "tram_ln_ge65"
+ ],
+ "basemap": {
+  "url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+  "subdomains": "abc",
+  "attribution": "&copy; OpenStreetMap contributors"
+ },
+ "days": [
+  "2026-09-28",
+  "2026-09-29",
+  "2026-09-30",
+  "2026-10-01",
+  "2026-10-02"
+ ]
+}

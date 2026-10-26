@@ -1,0 +1,114 @@
+{
+ "services_version": "services-v2",
+ "criteria": [
+  "edukacja",
+  "zdrowie",
+  "handel_uslugi",
+  "kultura_rekreacja"
+ ],
+ "composition": {
+  "edukacja": [
+   "przedszkole",
+   "szkola",
+   "uczelnia"
+  ],
+  "zdrowie": [
+   "przychodnia",
+   "szpital",
+   "apteka"
+  ],
+  "handel_uslugi": [
+   "supermarket",
+   "sklep_osiedlowy",
+   "centrum_handlowe",
+   "targowisko",
+   "poczta",
+   "urzad"
+  ],
+  "kultura_rekreacja": [
+   "biblioteka",
+   "dom_kultury",
+   "kino",
+   "teatr",
+   "muzeum",
+   "plac_zabaw",
+   "silownia",
+   "basen",
+   "boisko"
+  ]
+ },
+ "levels": {
+  "walk": [
+   5,
+   10,
+   15,
+   20
+  ],
+  "bike": [
+   5,
+   10,
+   15,
+   20,
+   30
+  ],
+  "car": [
+   5,
+   10,
+   15,
+   20
+  ],
+  "transit": [
+   15,
+   30,
+   45
+  ]
+ },
+ "defaults": {
+  "edukacja": {
+   "mode": "walk",
+   "y": 15,
+   "x": 2
+  },
+  "zdrowie": {
+   "mode": "walk",
+   "y": 15,
+   "x": 2
+  },
+  "handel_uslugi": {
+   "mode": "walk",
+   "y": 15,
+   "x": 3
+  },
+  "kultura_rekreacja": {
+   "mode": "walk",
+   "y": 15,
+   "x": 3
+  }
+ },
+ "scenarios": [
+  "walk",
+  "bike",
+  "car_morning",
+  "car_midday",
+  "car_afternoon",
+  "transit_morning_static_nolka",
+  "transit_morning_static_lka",
+  "transit_morning_p50_nolka",
+  "transit_morning_p50_lka",
+  "transit_morning_p85_nolka",
+  "transit_morning_p85_lka",
+  "transit_midday_static_nolka",
+  "transit_midday_static_lka",
+  "transit_midday_p50_nolka",
+  "transit_midday_p50_lka",
+  "transit_midday_p85_nolka",
+  "transit_midday_p85_lka",
+  "transit_afternoon_static_nolka",
+  "transit_afternoon_static_lka",
+  "transit_afternoon_p50_nolka",
+  "transit_afternoon_p50_lka",
+  "transit_afternoon_p85_nolka",
+  "transit_afternoon_p85_lka"
+ ],
+ "note": "exact R5 method: hex centre -> facility coordinates; transit = median over days, transfers unlimited"
+}
